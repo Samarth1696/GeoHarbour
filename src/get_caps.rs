@@ -59,7 +59,6 @@ impl WebMappingTileService {
             .query_pairs_mut()
             .append_pair("REQUEST", "GetCapabilities")
             .append_pair("SERVICE", "WMTS");
-        println!("{}", new_url);
         Ok(WebMappingTileService {
             version: "1.0.0".to_string(),
             url: Some(new_url),
